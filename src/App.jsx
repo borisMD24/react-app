@@ -1,9 +1,7 @@
-import React, { useContext } from "react";
+import React from "react";
 import {
   BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
 import Nav from "./components/nav/index"
 import themeContext from "./components/themeContext/index";
@@ -18,7 +16,7 @@ function App() {
     if (!localStorage.savedTheme) {
       localStorage.savedTheme = "light";
       return "light";
-    } else if (localStorage.savedTheme == "night") {
+    } else if (localStorage.savedTheme === "night") {
       return "night";
     } else {
       localStorage.savedTheme = "light";
@@ -27,7 +25,7 @@ function App() {
   }
   let [theme, setTheme] = React.useState(firstSetup());
   const switchTheme = () => {
-    if(theme == "light"){
+    if(theme === "light"){
       localStorage.savedTheme = "night";
       setTheme("night");
     } else {

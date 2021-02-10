@@ -7,7 +7,7 @@ import ThemeContext from "../themeContext/index";
 const Switcher = () => {
     const contextValue = React.useContext(ThemeContext);
     return(
-        <div className="switch">
+        <div className="switch" title="changer de theme">
             <div className={`container ${contextValue.cssClassName}`} onClick={contextValue.switchTheme}>
                 <div className="sun">
                     <img src={sun} alt="" srcset=""/>

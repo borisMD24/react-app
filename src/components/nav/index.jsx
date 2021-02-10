@@ -1,6 +1,5 @@
 import {Link} from "react-router-dom";
 import Switcher from "./switch";
-import ThemeContext from "../themeContext"
 
 const Nav = () => {
     return(
