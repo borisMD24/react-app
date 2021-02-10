@@ -4,7 +4,7 @@ import {
   Route
 } from "react-router-dom";
 import Nav from "./components/nav/index"
-import themeContext from "./components/themeContext/index";
+import ThemeContext from "./components/themeContext/index";
 import Home from "./components/home/index";
 import About from "./components/about/index";
 import Work from "./components/work/index";
@@ -39,7 +39,7 @@ function App() {
   }
   return (
 
-    <themeContext.Provider value = {contextValue}>
+    <ThemeContext.Provider value = {contextValue}>
     <div className={`app ${contextValue.cssClassName}`}>
       <Router>
         <Nav/>
@@ -56,7 +56,7 @@ function App() {
         </div>
       </Router>
     </div>
-      </themeContext.Provider>
+      </ThemeContext.Provider>
   );
 }
 
